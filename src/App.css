@@ -1,0 +1,192 @@
+/* General Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(135deg, #2c2c54, #706fd3);
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* ===================== ANIMATED BACKGROUND ===================== */
+.animated-background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 10%, transparent 80%);
+  animation: floatBackground 15s infinite alternate ease-in-out;
+  z-index: -1;
+}
+
+@keyframes floatBackground {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-30px);
+  }
+}
+
+/* ===================== GLASS EFFECT CONTAINER ===================== */
+.glass-container {
+  max-width: 800px;
+  margin: 50px auto;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  transition: 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-container:hover {
+  transform: scale(1.02);
+}
+
+/* ===================== HEADER ===================== */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+  animation: slideInFromTop 1.5s ease-in-out;
+}
+
+.name {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #f8c291;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Contact Info & Links */
+.contact-info {
+  font-size: 1rem;
+  margin: 5px 0;
+  animation: fadeInUp 1.2s ease-in-out;
+}
+
+.contact-info a {
+  color: #ffdd59;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+}
+
+.contact-info a:hover {
+  text-shadow: 0px 0px 10px #ffdd59;
+}
+
+.links a {
+  color: #38ada9;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+}
+
+.links a:hover {
+  text-shadow: 0px 0px 10px #38ada9;
+}
+
+/* ===================== SECTIONS ===================== */
+.section {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease-in-out;
+  position: relative;
+  animation: fadeInUp 1.2s ease-in-out;
+}
+
+.section:hover {
+  transform: scale(1.03);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* ===================== PROJECT CARDS ===================== */
+.project {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 15px;
+  border-radius: 10px;
+  margin: 10px 0;
+  transition: 0.3s ease-in-out;
+  animation: slideInFromLeft 1.5s ease-in-out;
+}
+
+.project:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* ===================== FOOTER ===================== */
+.footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #ffcccc;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* ===================== ANIMATIONS ===================== */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ===================== RESPONSIVE DESIGN ===================== */
+@media (max-width: 768px) {
+  .glass-container {
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  .name {
+    font-size: 2rem;
+  }
+}
